@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { PUBLIC_STUDIO_URL } from "$env/static/public";
+    import { PUBLIC_STUDIO_URL } from "$lib/resources/site-env";
 
     // components
     import { Category, UserDisplay } from "PenguinMod-SvelteUI";

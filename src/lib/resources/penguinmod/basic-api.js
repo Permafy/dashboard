@@ -1,4 +1,4 @@
-import { PUBLIC_BASIC_API_URL } from "$env/static/public";
+import { PUBLIC_BASIC_API_URL } from "$lib/resources/site-env";
 
 import externalLinks from "$lib/resources/external-links.js";
 

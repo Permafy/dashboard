@@ -1,4 +1,4 @@
-import { PUBLIC_STUDIO_URL } from "$env/static/public";
+import { PUBLIC_STUDIO_URL } from "$lib/resources/site-env";
 
 export default {
     /**

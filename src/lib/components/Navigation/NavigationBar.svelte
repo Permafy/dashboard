@@ -1,5 +1,5 @@
 <script>
-	import { PUBLIC_API_URL, PUBLIC_STUDIO_URL } from "$env/static/public";
+	import { PUBLIC_API_URL, PUBLIC_STUDIO_URL } from "$lib/resources/site-env";
 
     // Components
     import { Dropdown, DropdownItem, DropdownDivider } from "PenguinMod-SvelteUI";

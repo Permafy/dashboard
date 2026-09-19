@@ -1,5 +1,5 @@
 import { browser } from "$app/environment";
-import { PUBLIC_API_URL } from "$env/static/public";
+import { PUBLIC_API_URL } from "$lib/resources/site-env";
 import { get } from "svelte/store";
 
 // TODO: UNIMPORTANT: Should we claim "penguinmod" as the package name, or "@penguinmod/api"?
