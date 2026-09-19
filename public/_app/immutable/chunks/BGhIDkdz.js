@@ -1,1 +1,0 @@
-import"./VLKg-2eT.js";import{T as o}from"./BcfH88nW.js";function a(t){return r=>{r.title=o.mapCurrent(t)}}export{a as t};

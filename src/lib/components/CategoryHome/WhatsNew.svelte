@@ -1,4 +1,5 @@
 <script>
+    import { base } from "$app/paths";
     import { onMount } from "svelte";
 
     // components
@@ -73,7 +74,7 @@
     {:else if failed}
         <div class="single-container" style="color:red">
             <img
-                src="/asset/penguin/server.svg"
+                src={`${base}/asset/penguin/server.svg`}
                 alt="Whoops! Our server's having some problems. Try again later."
                 {@attach LocalizedAlt("home.server.error")}
             />

@@ -1,4 +1,6 @@
 <script>
+    import { base } from "$app/paths";
+
     // components
     import { Lottie } from "PenguinMod-SvelteUI";
     import Icon from "$lib/components/Icon/Component.svelte";
@@ -15,7 +17,7 @@
 <div class="row">
     <div class="card">
         <Lottie
-            src="/asset/penguin/animated/lottie/hoverdevice.json"
+            src={`${base}/asset/penguin/animated/lottie/hoverdevice.json`}
             autoplay
         >
             <div class="card-lottie-placeholder">
@@ -25,7 +27,7 @@
     </div>
     <div class="card">
         <img
-            src="/asset/penguin/animated/svg/hoverdevice.svg"
+            src={`${base}/asset/penguin/animated/svg/hoverdevice.svg`}
             alt="Penguin"
         />
     </div>
@@ -39,7 +41,7 @@
 <div class="row">
     <div class="card">
         <Lottie
-            src="/asset/penguin/animated/lottie/test.json"
+            src={`${base}/asset/penguin/animated/lottie/test.json`}
             autoplay
         >
             <div class="card-lottie-placeholder">
@@ -49,7 +51,7 @@
     </div>
     <div class="card">
         <img
-            src="/asset/penguin/animated/svg/test.svg"
+            src={`${base}/asset/penguin/animated/svg/test.svg`}
             alt="Penguin"
         />
     </div>
@@ -61,7 +63,7 @@
 <div class="row">
     <div class="card">
         <Lottie
-            src="/asset/penguin/animated/lottie/engineerserver.json"
+            src={`${base}/asset/penguin/animated/lottie/engineerserver.json`}
             autoplay
         >
             <div class="card-lottie-placeholder">
@@ -77,7 +79,7 @@
 <div class="row">
     <div class="card">
         <Lottie
-            src="/asset/penguin/animated/lottie/party.json"
+            src={`${base}/asset/penguin/animated/lottie/party.json`}
             autoplay
         >
             <div class="card-lottie-placeholder">
@@ -93,7 +95,7 @@
 <div class="row">
     <div class="card">
         <Lottie
-            src="/asset/penguin/animated/lottie/drawingthinking.json"
+            src={`${base}/asset/penguin/animated/lottie/drawingthinking.json`}
             autoplay
         >
             <div class="card-lottie-placeholder">
@@ -109,7 +111,7 @@
 <div class="row">
     <div class="card">
         <Lottie
-            src="/asset/penguin/animated/lottie/splashbucket.json"
+            src={`${base}/asset/penguin/animated/lottie/splashbucket.json`}
             autoplay
         >
             <div class="card-lottie-placeholder">

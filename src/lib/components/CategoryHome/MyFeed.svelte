@@ -1,4 +1,5 @@
 <script>
+    import { base } from "$app/paths";
     import { onMount } from "svelte";
     import { PUBLIC_STUDIO_URL } from "$lib/resources/site-env";
 
@@ -109,7 +110,7 @@
             <div class="category-textdisplay" style="color:red">
                 <p>
                     <img
-                        src="/asset/penguin/mailboxfull.svg"
+                        src={`${base}/asset/penguin/mailboxfull.svg`}
                         alt="Whoops! Our server's having some problems. Try again later."
                         {@attach LocalizedAlt("home.server.error")}
                     />
@@ -142,7 +143,7 @@
                     <div class="category-textdisplay">
                         <p>
                             <img
-                                src="/asset/penguin/mailbox.svg"
+                                src={`${base}/asset/penguin/mailbox.svg`}
                                 alt="Nothing yet!"
                                 {@attach LocalizedAlt("generic.noneyet")}
                             />

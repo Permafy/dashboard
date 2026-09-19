@@ -1,4 +1,5 @@
 <script>
+    import { base } from "$app/paths";
     import { onMount } from "svelte";
     import { browser } from "$app/environment";
 
@@ -75,8 +76,8 @@
 
 <div class="loading">
     <img
-        src={$StoreSettings.appTheme === "light" ? "/asset/icons/loading-blue.svg"
-            : ($StoreSettings.appTheme === "contrast" ? "/asset/icons/loading-black.svg" : "/asset/icons/loading-white.svg")}
+        src={$StoreSettings.appTheme === "light" ? `${base}/asset/icons/loading-blue.svg`
+            : ($StoreSettings.appTheme === "contrast" ? `${base}/asset/icons/loading-black.svg` : `${base}/asset/icons/loading-white.svg`)}
         alt="Loading"
         {@attach LocalizedAlt("generic.loading")}
         {@attach LocalizedTooltip("generic.loading")}

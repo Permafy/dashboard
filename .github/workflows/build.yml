@@ -23,7 +23,11 @@ jobs:
     - name: Setup .env
       run: cp .env.template .env
     - run: npm ci
+      env:
+        PAGES_BASE: /${{ github.event.repository.name }}
     - run: npm run build
+      env:
+        PAGES_BASE: /${{ github.event.repository.name }}
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v3.0.1
       with:

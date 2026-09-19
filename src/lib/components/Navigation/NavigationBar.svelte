@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import { PUBLIC_API_URL, PUBLIC_STUDIO_URL } from "$lib/resources/site-env";
 
     // Components
@@ -16,11 +17,11 @@
 
     const optionLanguage = (newLangCode) => {
         $StoreSettings.appLanguage = newLangCode;
-        StateApplication.penguinActionIndicatorLottie = "/asset/penguin/animated/lottie/drawingthinking.json";
+        StateApplication.penguinActionIndicatorLottie = `${base}/asset/penguin/animated/lottie/drawingthinking.json`;
     };
     const optionTheme = (newTheme) => {
         $StoreSettings.appTheme = newTheme;
-        StateApplication.penguinActionIndicatorLottie = "/asset/penguin/animated/lottie/splashbucket.json";
+        StateApplication.penguinActionIndicatorLottie = `${base}/asset/penguin/animated/lottie/splashbucket.json`;
     };
 </script>
 
@@ -84,7 +85,7 @@
                 {/each}
                 <!-- joke lang link -->
                 <!-- TODO: This should link to /settingssite and thatll have the joke langs available -->
-                <DropdownItem href="/settingssite">
+                <DropdownItem href={`${base}/settingssite`}>
                     <LocalizedString
                         text="See more"
                         key="home.seemore"
@@ -141,7 +142,7 @@
             </Dropdown>
             <!-- site settings link  -->
             <!-- TODO: This should link to /settingssite -->
-            <DropdownItem href="/settingssite">
+            <DropdownItem href={`${base}/settingssite`}>
                 <LocalizedString
                     text="See more"
                     key="home.seemore"
@@ -151,10 +152,10 @@
         </Dropdown>
     </div>
     <div class="navigation-bar-section navigation-links">
-        <a class="navigation-logo" href="/">
+        <a class="navigation-logo" href={base || "/"}>
             <img
                 class="navigation-logo-image"
-                src="/asset/icons/penguinmod-white-outline.svg"
+                src={`${base}/asset/icons/penguinmod-white-outline.svg`}
                 alt="PenguinMod"
             />
         </a>

@@ -1,5 +1,6 @@
 <script>
     import { browser } from "$app/environment";
+    import { base } from "$app/paths";
     import { PUBLIC_STUDIO_URL } from "$lib/resources/site-env";
 
     import { PenguinModAPIError } from "penguinmod";
@@ -73,7 +74,7 @@
                             key="home.introduction2"
                         />
                     </p>
-                    <Button icon="/asset/icons/blocks-blue.svg" kind="highlighted" href={externalLinks.editor}>
+                    <Button icon={`${base}/asset/icons/blocks-blue.svg`} kind="highlighted" href={externalLinks.editor}>
                         <LocalizedString
                             text="Try it out"
                             key="home.tryout"
@@ -85,7 +86,7 @@
                 <div class="section-onboarding-showoff-inner">
                     {#if !StateApplication.loggedInProcessed}
                         <img
-                            src="/asset/penguin/large/frontpage.svg"
+                            src={`${base}/asset/penguin/large/frontpage.svg`}
                             alt="PenguinMod"
                         />
                     {:else if !($StoreSettings.loggedIn)}
@@ -188,7 +189,7 @@
                             <!-- My Stuff Button -->
                             <a
                                 title="My Stuff"
-                                href="/mystuff"
+                                href={`${base}/mystuff`}
                                 {@attach LocalizedTooltip("mystuff.title")}
                             >
                                 <button
@@ -208,7 +209,7 @@
                             <!-- Settings Button -->
                             <a
                                 title="Settings"
-                                href="/settings"
+                                href={`${base}/settings`}
                                 {@attach LocalizedTooltip("account.settings.title")}
                             >
                                 <button
@@ -292,7 +293,7 @@
                     >
                         {#if frontPageRatelimited}
                             <img
-                                src="/asset/penguin/wait.svg"
+                                src={`${base}/asset/penguin/wait.svg`}
                                 alt="Please wait before trying to access this page again."
                                 {@attach LocalizedAlt("navigation.error.429")}
                             />
@@ -304,7 +305,7 @@
                             </p>
                         {:else}
                             <img
-                                src="/asset/penguin/server.svg"
+                                src={`${base}/asset/penguin/server.svg`}
                                 alt="Whoops! Our server's having some problems. Try again later."
                                 {@attach LocalizedAlt("home.server.error")}
                             />
@@ -319,7 +320,7 @@
                 {:else if $StoreSession.frontpageProjectsCachedResult[section].length <= 0}
                     <div class="section-categories-projects-rowtext">
                         <img
-                            src="/asset/penguin/drawing.svg"
+                            src={`${base}/asset/penguin/drawing.svg`}
                             alt="No projects found. Why not upload one?"
                             height="80px"
                             {@attach LocalizedAlt("mystuff.none")}
@@ -496,19 +497,19 @@
                         key="home.footer.sections.info"
                     />
                 </p>
-                <a href={"/terms"}>
+                <a href={`${base}/terms`}>
                     <LocalizedString
                         text="Terms of Service"
                         key="home.footer.sections.info.terms"
                     />
                 </a>
-                <a href={"/privacy"}>
+                <a href={`${base}/privacy`}>
                     <LocalizedString
                         text="Privacy Policy"
                         key="home.footer.sections.info.privacy"
                     />
                 </a>
-                <a href={"/guidelines/uploading"}>
+                <a href={`${base}/guidelines/uploading`}>
                     <LocalizedString
                         text="Uploading Guidelines"
                         key="home.footer.sections.info.guidelines"
@@ -528,7 +529,7 @@
                         key="home.footer.sections.donate"
                     />
                 </p>
-                <a href={"/support"}>
+                <a href={`${base}/support`}>
                     PenguinMod
                 </a>
                 <a href={externalLinks.scratch}>

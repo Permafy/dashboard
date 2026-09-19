@@ -1,5 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')?.[1];
+const pagesBase = process.env.PAGES_BASE || (process.env.GITHUB_ACTIONS && repoName ? `/${repoName}` : '');
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -13,6 +16,9 @@ const config = {
             precompress: true,
             strict: true
         }),
+        paths: {
+            base: pagesBase,
+        },
         prerender: {
             handleHttpError: "warn"
         }
